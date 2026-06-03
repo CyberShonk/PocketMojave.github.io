@@ -17,6 +17,7 @@ None
 ## External links included
 
 - https://github.com/CyberShonk/DroidModLoader
+- https://github.com/CyberShonk/PocketMojave.github.io/issues/new/choose
 - https://github.com/GameNative/proton-wine/releases
 - https://github.com/utkarshdalal/GameNative
 - https://loot.github.io/
@@ -44,16 +45,15 @@ None
 - https://www.nexusmods.com/newvegas/mods/70801
 - https://www.nexusmods.com/newvegas/mods/71239
 - https://www.nexusmods.com/newvegas/mods/71336
+- https://www.nexusmods.com/newvegas/mods/71390
 - https://www.nexusmods.com/newvegas/mods/71973
 - https://www.nexusmods.com/newvegas/mods/72541
 - https://www.nexusmods.com/newvegas/mods/74295
 - https://www.nexusmods.com/newvegas/mods/75417
 - https://www.nexusmods.com/newvegas/mods/75920
-- https://www.nexusmods.com/newvegas/mods/76308
 - https://www.nexusmods.com/newvegas/mods/77073
 - https://www.nexusmods.com/newvegas/mods/77963
 - https://www.nexusmods.com/newvegas/mods/77989
-- https://www.nexusmods.com/newvegas/mods/79358
 - https://www.nexusmods.com/newvegas/mods/80666
 - https://www.nexusmods.com/newvegas/mods/80993
 - https://www.nexusmods.com/newvegas/mods/81002
@@ -77,12 +77,18 @@ None
 - https://www.nexusmods.com/newvegas/mods/85622
 - https://www.nexusmods.com/newvegas/mods/85748
 - https://www.nexusmods.com/newvegas/mods/86136
+- https://www.nexusmods.com/newvegas/mods/87814
 - https://www.nexusmods.com/newvegas/mods/87830
 - https://www.nexusmods.com/newvegas/mods/87966
 - https://www.nexusmods.com/newvegas/mods/90536
 - https://www.nexusmods.com/newvegas/mods/90824
+- https://www.nexusmods.com/newvegas/mods/91500
 - https://www.nexusmods.com/newvegas/mods/92289
 - https://www.nexusmods.com/newvegas/mods/93642
+- https://www.nexusmods.com/newvegas/mods/93697
 - https://www.nexusmods.com/newvegas/mods/96007
 - https://www.nexusmods.com/newvegas/mods/96240
+- https://www.nexusmods.com/profile/Qolore7/mods
+- https://www.nexusmods.com/profile/Stentorious/mods
+- https://www.nexusmods.com/profile/deno46?gameId=110
 - https://www.nexusmods.com/site/mods/631

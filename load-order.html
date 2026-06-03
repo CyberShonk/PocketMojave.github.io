@@ -17,54 +17,10 @@
 </header>
 <main class="wrap page">
 
-<h1>Load Order</h1>
-<p>DML handles mod priority and plugin order separately. This page is about plugin order.</p>
-<section>
-  <h2>Use LOOT as a helper</h2>
-  <p><a href="https://loot.github.io/" target="_blank" rel="noopener">LOOT</a> supports Fallout: New Vegas and can help sort plugins, but do not treat it as magic. Use it to get warnings and a suggested order, then apply the order in DML.</p>
-  <ol>
-    <li>Copy or expose your DML-installed Data folder to a PC or Windows environment where LOOT can see the plugins.</li>
-    <li>Open LOOT.</li>
-    <li>Select Fallout: New Vegas.</li>
-    <li>Let LOOT detect the installed plugins.</li>
-    <li>Sort the plugins.</li>
-    <li>Read the warnings. Missing masters matter more than the final order.</li>
-    <li>Write down or screenshot the sorted order.</li>
-    <li>Do not blindly copy advice for mods you skipped.</li>
-    <li>Apply the final order manually in DML.</li>
-  </ol>
-  <aside class="callout warn"><strong>Important</strong><div>If LOOT says a plugin has a missing master, stop. Do not launch the game until the missing master is installed, disabled properly, or the dependent plugin is removed.</div></aside>
-</section>
-<section>
-  <h2>Sort plugins in Droid Mod Loader</h2>
-  <ol>
-    <li>Open the Pocket Mojave profile.</li>
-    <li>Deploy Current State.</li>
-    <li>Run plugin discovery.</li>
-    <li>Open the plugin list.</li>
-    <li>Enable the plugins used by this guide.</li>
-    <li>Move official masters to the top if they are not already there.</li>
-    <li>Put YUP after the official DLC.</li>
-    <li>Put other ESM files after YUP unless their mod page says otherwise.</li>
-    <li>Put bug-fix ESP files before gameplay and patch ESP files.</li>
-    <li>Put patches after the mods they patch.</li>
-    <li>Export plugin outputs.</li>
-    <li>Launch the game through GameNative.</li>
-  </ol>
-  <aside class="callout good"><strong>Rule of thumb</strong><div>Masters first, fixes early, UI/gameplay after fixes, patches last.</div></aside>
-</section>
-<section>
-  <h2>Where the plugin files go</h2>
-  <p>The usual Windows paths are:</p>
-  <pre><code>%LOCALAPPDATA%/FalloutNV/plugins.txt
-%LOCALAPPDATA%/FalloutNV/loadorder.txt</code></pre>
-  <p>Inside a Proton or Wine prefix, that usually means:</p>
-  <pre><code>drive_c/users/&lt;user&gt;/AppData/Local/FalloutNV/</code></pre>
-  <p>The exact GameNative folder can vary. If the game is ignoring your load order, check this path first.</p>
-</section>
-<section>
-  <h2>Copyable starter loadorder.txt</h2>
-  <pre><code>FalloutNV.esm
+<h1>Load Order</h1><p>This page covers LOOT as a helper, DML plugin sorting, and starter text files for a Pocket Mojave setup.</p>
+<section><h2>Use LOOT as a check, not a magic button</h2><p><a href="https://loot.github.io/" target="_blank" rel="noopener">LOOT</a> supports Fallout: New Vegas and can identify missing masters, warnings, dirty plugins, and order suggestions. Use it on PC when you can, then copy the result back into DML/GameNative.</p><ol><li>Install LOOT on a Windows PC or a Windows environment that can see your New Vegas folder.</li><li>Make sure the same plugins are present as the DML profile you are checking.</li><li>Run LOOT for Fallout: New Vegas.</li><li>Read the warnings before sorting.</li><li>Apply sorting only if the warnings make sense.</li><li>Compare LOOT's result against this guide's order shape.</li><li>Use DML to match the order on Android.</li></ol></section>
+<section><h2>Sorting plugins in Droid Mod Loader</h2><ol><li>Open DML.</li><li>Select the Pocket Mojave profile.</li><li>Deploy Current State.</li><li>Run plugin discovery.</li><li>Enable the guide plugins you installed.</li><li>Move official DLC to the top, then YUP, then other fixes, then UI, gameplay, and visual plugins.</li><li>Export plugin outputs.</li><li>Launch the game from GameNative and check that the expected plugins are active.</li></ol><aside class="callout"><strong>Important</strong><div>Plugin order controls ESM/ESP loading. Mod priority controls loose file conflicts. They are not the same list.</div></aside></section>
+<section><h2>Starter loadorder.txt</h2><p>This is a starter order for the plugins in the mod list. It includes optional plugin names too, so it is easy to paste and trim. Missing entries do not install anything. If the game, DML, or LOOT complains about a plugin you skipped, remove that line.</p><pre><code>FalloutNV.esm
 DeadMoney.esm
 HonestHearts.esm
 OldWorldBlues.esm
@@ -76,33 +32,75 @@ MercenaryPack.esm
 TribalPack.esm
 YUP - Base Game + All DLC.esm
 YUPDate.esm
-
-; Other ESM files go here.
-
 Unofficial Patch NVSE Plus.esp
-
-; Bug-fix ESP files go here.
-; UI ESP files go here.
-; Gameplay ESP files go here.
-; Patches go after the mods they patch.</code></pre>
-</section>
-<section>
-  <h2>Copyable starter plugins.txt</h2>
-  <pre><code># This file is used by Fallout: New Vegas to enable plugins.
-# Official masters are usually not starred here.
+NVMIM.esp
+NVMIM - YUP Patch.esp
+The Mod Configuration Menu.esp
+Vanilla UI Plus.esp
+UI Improvements.esp
+PipBoyUITweaks.esp
+Clean Vanilla HUD.esp
+Clean Companion Wheel 256.esp
+High Resolution Screens.esp
+High Res Local Maps.esp
+Iron Sights Aligned.esp
+Misc Audio Tweaks.esp
+Muzzle Flash Light Fix.esp
+Viewmodel Shading Fix.esp
+JAM - Just Assorted Mods.esp
+Enhanced Movement.esp
+Manual Reload and Ammo Memory.esp
+Better Caravan.esp
+Cookable Grenades.esp
+Faster Sleep-Wait.esp
+Auto-Save Manager.esp
+Bad Touch.esm
+Simple Interior Lighting Enhancement.esp
+Sunshine On My Shoulders.esp</code></pre></section>
+<section><h2>Starter plugins.txt</h2><p>The <code>*</code> means enabled. Use this as a template, then let DML discovery and your installed files confirm the exact plugin names.</p><pre><code>*FalloutNV.esm
+*DeadMoney.esm
+*HonestHearts.esm
+*OldWorldBlues.esm
+*LonesomeRoad.esm
+*GunRunnersArsenal.esm
+*CaravanPack.esm
+*ClassicPack.esm
+*MercenaryPack.esm
+*TribalPack.esm
 *YUP - Base Game + All DLC.esm
 *YUPDate.esm
 *Unofficial Patch NVSE Plus.esp
-
-; Add guide plugins below as you install them.
-; Example:
-; *SomePlugin.esp</code></pre>
-</section>
+*NVMIM.esp
+*NVMIM - YUP Patch.esp
+*The Mod Configuration Menu.esp
+*Vanilla UI Plus.esp
+*UI Improvements.esp
+*PipBoyUITweaks.esp
+*Clean Vanilla HUD.esp
+*Clean Companion Wheel 256.esp
+*High Resolution Screens.esp
+*High Res Local Maps.esp
+*Iron Sights Aligned.esp
+*Misc Audio Tweaks.esp
+*Muzzle Flash Light Fix.esp
+*Viewmodel Shading Fix.esp
+*JAM - Just Assorted Mods.esp
+*Enhanced Movement.esp
+*Manual Reload and Ammo Memory.esp
+*Better Caravan.esp
+*Cookable Grenades.esp
+*Faster Sleep-Wait.esp
+*Auto-Save Manager.esp
+*Bad Touch.esm
+*Simple Interior Lighting Enhancement.esp
+*Sunshine On My Shoulders.esp</code></pre></section>
+<section><h2>Where the files go</h2><p>The usual Windows paths are:</p><pre><code>%LOCALAPPDATA%/FalloutNV/plugins.txt
+%LOCALAPPDATA%/FalloutNV/loadorder.txt</code></pre><p>Inside a Proton or Wine prefix, that usually means:</p><pre><code>drive_c/users/&lt;user&gt;/AppData/Local/FalloutNV/</code></pre><p>The exact GameNative folder can vary. If the game is ignoring your load order, check this first.</p></section>
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p>Built for Android handheld New Vegas, GameNative, and <a href="https://github.com/CyberShonk/DroidModLoader" target="_blank" rel="noopener">Droid Mod Loader</a>.</p>
+    <p>Built for Android handheld New Vegas, <a href="https://github.com/utkarshdalal/GameNative" target="_blank" rel="noopener">GameNative</a>, and <a href="https://github.com/CyberShonk/DroidModLoader" target="_blank" rel="noopener">Droid Mod Loader</a>.</p>
     <p class="small">This guide is unofficial and does not redistribute any game files or mods. Read each mod page before installing.</p>
   </div>
 </footer>

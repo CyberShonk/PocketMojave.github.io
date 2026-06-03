@@ -1,0 +1,77 @@
+name: Pocket Mojave report
+description: Report a Pocket Mojave guide, GameNative, DML, mod list, or performance issue.
+title: "[Pocket Mojave]: "
+labels: ["pocket-mojave", "guide-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Pocket Mojave. Attach your DML support report, plugin list, load order, and crash logger output if available.
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: Example: AYN Thor, Odin 2, Galaxy Z Fold, etc.
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version
+      placeholder: Example: Android 14
+  - type: input
+    id: gamenative
+    attributes:
+      label: GameNative version
+  - type: dropdown
+    id: source
+    attributes:
+      label: Game source
+      options:
+        - Steam
+        - GOG
+        - Epic
+        - Other
+  - type: input
+    id: proton
+    attributes:
+      label: Wine/Proton version
+      placeholder: Example: proton-10.0-arm64ec-2
+  - type: input
+    id: dxvk
+    attributes:
+      label: DXVK / Turnip / driver info
+  - type: input
+    id: dml
+    attributes:
+      label: Droid Mod Loader version
+  - type: input
+    id: section
+    attributes:
+      label: Guide section reached
+      placeholder: Example: Utilities, Bug fixes, UI, Weather and lighting
+    validations:
+      required: true
+  - type: input
+    id: lastchange
+    attributes:
+      label: Last mod or setting changed
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What happened?
+      description: Include crash location, timing, and exact steps if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files attached or available
+      description: List DML support report, plugins.txt, loadorder.txt, crash log, screenshots, or benchmark notes.
+  - type: textarea
+    id: perf
+    attributes:
+      label: Performance notes
+      description: Mention GameNative overlay numbers first. Add DXVK HUD details only if you used it.
