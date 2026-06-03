@@ -79,7 +79,7 @@ None
 - https://www.nexusmods.com/newvegas/mods/86136
 - https://www.nexusmods.com/newvegas/mods/87814
 - https://www.nexusmods.com/newvegas/mods/87830
-- https://www.nexusmods.com/newvegas/mods/87966
+- https://www.nexusmods.com/newvegas/mods/96215
 - https://www.nexusmods.com/newvegas/mods/90536
 - https://www.nexusmods.com/newvegas/mods/90824
 - https://www.nexusmods.com/newvegas/mods/91500
@@ -92,3 +92,14 @@ None
 - https://www.nexusmods.com/profile/Stentorious/mods
 - https://www.nexusmods.com/profile/deno46?gameId=110
 - https://www.nexusmods.com/site/mods/631
+
+
+## Revision notes
+
+- Corrected Sunshine On My Shoulders to Nexus mod `96215`.
+- Removed separate optional-file labeling from the guide tables. Extra file choices now live in each mod note.
+- Added lStewieAl preset links: Stewie Tweaks Essentials INI and Stewie's Tweaks Ameliorated INI.
+
+## Internal page added
+
+- `changelog.html` — Tracks mod-list additions, removals, and save-safety notes only.

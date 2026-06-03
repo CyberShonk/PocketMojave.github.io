@@ -25,3 +25,13 @@ This site includes a GitHub issue form for Pocket Mojave reports. Make sure the 
 3. Under Features, enable Issues.
 4. Push the `.github/ISSUE_TEMPLATE` folder.
 5. Open the Issues tab and click New issue.
+
+## Pages
+
+- `index.html` — home page
+- `setup.html` — GameNative, DML, BethINI Pie, and performance setup
+- `mods.html` — mod list
+- `load-order.html` — LOOT and DML load-order help
+- `avoid.html` — tools and mod categories to avoid for this guide
+- `changelog.html` — mod-list changes and save-safety notes
+- `report.html` — tester report instructions
