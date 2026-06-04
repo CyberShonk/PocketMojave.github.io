@@ -1,97 +1,73 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Changelog | Shonk's Pocket Mojave</title>
-<meta content="Pocket Mojave mod-list changelog and save-safety notes." name="description"/>
-<link href="assets/site.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog | Shonk's Pocket Mojave</title>
+  <meta name="description" content="A New Vegas on Android guide for GameNative, Droid Mod Loader, and handheld tinkering.">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="logo" href="index.html">Shonk's Pocket Mojave</a>
-<nav aria-label="Main navigation" class="nav">
-<a href="index.html">Home</a>
-<a href="setup.html">Setup</a>
-<a href="mods.html">Mod List</a>
-<a href="load-order.html">Load Order</a>
-<a href="avoid.html">Avoid</a>
-<a class="active" href="changelog.html">Changelog</a>
-<a href="report.html">Reports</a>
-</nav>
-</div>
-</header>
-<main class="c o n t a i e r">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Shonk's Pocket Mojave</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="">Home</a>
+<a href="setup.html" class="">Setup</a>
+<a href="mods.html" class="">Mod List</a>
+<a href="load-order.html" class="">Load Order</a>
+<a href="avoid.html" class="">Avoid</a>
+<a href="changelog.html" class="active">Changelog</a>
+<a href="report.html" class="">Reports</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+
 <section class="hero">
-<h1>Changelog</h1>
-<p class="lead">Mod-list changes only. This page is for added mods, removed mods, load-order-impacting changes, and save-safety notes.</p>
-<p>Small website fixes, typo fixes, layout changes, and setup-command changes are intentionally not tracked here.</p>
-</section>
-<section class="callout warn">
-<h2>How to read this page</h2>
-<p><strong>Save safe</strong> means the update should be okay for an existing save if you follow the notes. <strong>New game recommended</strong> means the update changes enough of the list that a fresh save is the cleanest test. <strong>New game required</strong> means do not add the update mid-playthrough unless you know exactly what you are doing.</p>
-</section>
-<section>
-<h2>Current guide version</h2>
-<div class="timeline">
-<article class="change-entry">
-<div class="change-head">
-<h3>2026-06-02 — Initial Pocket Mojave list</h3>
-<span class="badge rec">New game recommended</span>
-</div>
-<p>This is the first public version of the guide site. Treat it as a fresh setup target rather than an update to an existing modded save.</p>
-<div class="table-wrap">
-<table class="change-table">
-<thead>
-<tr><th>Type</th><th>Changes</th></tr>
-</thead>
-<tbody>
-<tr>
-<td data-label="Type">Added</td>
-<td data-label="Changes">Root tools, utility plugins, bug fixes, UI fixes, light gameplay improvements, optional mesh fixes, audio fixes, and mobile-friendly weather/lighting options.</td>
-</tr>
-<tr>
-<td data-label="Type">Removed</td>
-<td data-label="Changes">None. This is the initial list.</td>
-</tr>
-<tr>
-<td data-label="Type">Save safety</td>
-<td data-label="Changes">Start from a clean save after the vanilla check. Do not use this first version as a drop-in upgrade for a long-running modded save.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</article>
-</div>
-</section>
-<section>
-<h2>Changelog format for future updates</h2>
-<p>Future updates should keep the same pattern so users can quickly tell what changed and whether it is safe for an existing save.</p>
-<div class="table-wrap">
-<table class="change-table">
-<thead><tr><th>Field</th><th>Use it for</th></tr></thead>
-<tbody>
-<tr><td data-label="Field">Added</td><td data-label="Use it for">New mods, new required files, new optional files, or newly recommended settings that affect the mod list.</td></tr>
-<tr><td data-label="Field">Removed</td><td data-label="Use it for">Mods or files that are no longer part of the guide.</td></tr>
-<tr><td data-label="Field">Changed</td><td data-label="Use it for">A mod switched to a different main file, an optional file became required, or the load order changed.</td></tr>
-<tr><td data-label="Field">Save safety</td><td data-label="Use it for">Say whether the update is save safe, needs a clean save, or needs a new game.</td></tr>
-</tbody>
-</table>
-</div>
+  <h1>Changelog</h1>
+  <p class="lead">Mod-list changes only. This page is for added mods, removed mods, load-order-impacting changes, and save-safety notes.</p>
+  <p>Small website fixes, typo fixes, layout changes, and setup-command changes are intentionally not tracked here.</p>
 </section>
 
-<nav aria-label="Page navigation" class="page-nav">
-<a class="page-nav-link prev" href="avoid.html"><span>← Previous</span><strong>Avoid</strong></a>
-<a class="page-nav-link next" href="report.html"><span>Next →</span><strong>Reports</strong></a>
-</nav></main>
-<footer class="site-footer">
-<div class="container">
-    Built for Android handheld New Vegas, <a href="https://github.com/utkarshdalal/GameNative">GameNative</a>, and <a href="https://github.com/CyberShonk/DroidModLoader">Droid Mod Loader</a>.
-    <br/>This guide is unofficial and does not redistribute any game files or mods. Read each mod page before installing.
-  </div>
-</footer>
-<script src="copy.js"></script>
+<div class="callout notice">
+  <h3>How to read this page</h3>
+  <p><strong>Save safe</strong> means the update should be okay for an existing save if you follow the notes. <strong>New game recommended</strong> means the update changes enough of the list that a fresh save is the cleanest test. <strong>New game required</strong> means do not add the update mid-playthrough unless you know exactly what you are doing.</p>
+</div>
+
+<h2>Current guide version</h2>
+<div class="mod-list">
+  <article class="mod-card">
+    <header><h3>2026-06-02 — Initial Pocket Mojave list</h3><span class="badge recommended">New game recommended</span></header>
+    <p>This is the first public version of the guide site. Treat it as a fresh setup target rather than an update to an existing modded save.</p>
+    <div class="meta">
+      <div><strong>Added</strong>Root tools, utility plugins, bug fixes, UI fixes, light gameplay improvements, optional mesh fixes, audio fixes, and mobile-friendly weather/lighting options.</div>
+      <div><strong>Removed</strong>None. This is the initial list.</div>
+      <div><strong>Save safety</strong>Start from a clean save after the vanilla check. Do not use this first version as a drop-in upgrade for a long-running modded save.</div>
+    </div>
+  </article>
+</div>
+
+<h2>Changelog format for future updates</h2>
+<p>Future updates should keep the same pattern so users can quickly tell what changed and whether it is safe for an existing save.</p>
+<div class="card-grid">
+  <article class="card"><h3>Added</h3><p>New mods, new required files, new optional files, or newly recommended settings that affect the mod list.</p></article>
+  <article class="card"><h3>Removed</h3><p>Mods or files that are no longer part of the guide.</p></article>
+  <article class="card"><h3>Changed</h3><p>A mod switched to a different main file, an optional file became required, or the load order changed.</p></article>
+  <article class="card"><h3>Save safety</h3><p>Say whether the update is save safe, needs a clean save, or needs a new game.</p></article>
+</div>
+
+
+<nav class="page-nav" aria-label="Page navigation">
+  <a class="page-nav-link prev" href="avoid.html"><span>&larr; Previous</span><strong>Avoid</strong></a>
+  <a class="page-nav-link next" href="report.html"><span>Next &rarr;</span><strong>Reports</strong></a>
+</nav>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      Built for Android handheld New Vegas, <a href="https://github.com/utkarshdalal/GameNative">GameNative</a>, and <a href="https://github.com/CyberShonk/DroidModLoader">Droid Mod Loader</a>.
+      <br>This guide is unofficial and does not redistribute any game files or mods. Read each mod page before installing.
+    </div>
+  </footer>
 </body>
 </html>
