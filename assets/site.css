@@ -192,6 +192,76 @@ pre {
 
 .checklist li::marker { color: var(--accent); }
 
+
+/* Compact cross-guide selector */
+.guide-switcher {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 0 28px;
+  padding: 12px;
+  background: rgba(27, 25, 24, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.guide-switcher-label {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0 8px 0 4px;
+  white-space: nowrap;
+}
+
+.guide-chip {
+  flex: 1 1 0;
+  min-width: 0;
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  background: rgba(36, 33, 32, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.guide-chip:hover {
+  border-color: var(--accent);
+  background: rgba(90, 32, 28, 0.35);
+}
+
+.guide-chip.current {
+  border-color: var(--accent);
+  background: rgba(90, 32, 28, 0.45);
+}
+
+.guide-chip strong,
+.guide-chip span {
+  display: block;
+}
+
+.guide-chip span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 3px;
+}
+
+.card-grid,
+.mod-list,
+.callout {
+  margin-bottom: 22px;
+}
+
+.callout + .card-grid,
+.callout + .mod-list,
+.guide-switcher + .card-grid {
+  margin-top: 16px;
+}
+
 /* Bottom page navigation */
 .page-nav {
   display: grid;
@@ -255,6 +325,16 @@ pre {
   .hero { padding: 20px; border-radius: 18px; }
   .mod-card header { flex-direction: column; }
   .container { width: min(100% - 20px, 1040px); }
+
+  .guide-switcher {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .guide-switcher-label {
+    padding: 0;
+  }
+
 }
 
 
