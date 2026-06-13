@@ -1,0 +1,282 @@
+name: Device compatibility report
+description: Submit a tested Android device and GameNative configuration for Pocket Mojave.
+title: "[Compatibility]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit working, partially working, unstable, and non-working results.
+
+        Include exact versions and settings. A vague "it works" report is not enough to reproduce or verify a result.
+
+        This form is for **Pocket Mojave — Fallout: New Vegas**.
+
+  - type: input
+    id: device
+    attributes:
+      label: Device name
+      placeholder: "Example: AYN Odin 2, Retroid Pocket 5, Samsung Galaxy S23"
+    validations:
+      required: true
+
+  - type: input
+    id: chipset
+    attributes:
+      label: Chipset / SoC
+      placeholder: "Example: Snapdragon 8 Gen 2"
+    validations:
+      required: true
+
+  - type: input
+    id: ram
+    attributes:
+      label: Device RAM
+      placeholder: "Example: 12 GB"
+    validations:
+      required: true
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+      placeholder: "Example: Android 13"
+    validations:
+      required: true
+
+  - type: input
+    id: driver
+    attributes:
+      label: Turnip or graphics driver version
+      placeholder: "Example: turnip26.0.0_R8"
+    validations:
+      required: true
+
+  - type: input
+    id: vulkan
+    attributes:
+      label: Vulkan version
+      placeholder: "Example: Vulkan 1.3"
+
+  - type: dropdown
+    id: game_source
+    attributes:
+      label: Game source
+      options:
+        - Steam
+        - GOG
+        - Epic Games Store
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install_state
+    attributes:
+      label: Install state
+      options:
+        - Clean game install
+        - Existing modded install
+        - Unsure
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## GameNative configuration
+
+  - type: input
+    id: gamenative_version
+    attributes:
+      label: GameNative version or build
+      placeholder: "Example: GameNative 1.0.0 standard APK"
+    validations:
+      required: true
+
+  - type: input
+    id: container
+    attributes:
+      label: Container
+      placeholder: "Example: bionic"
+    validations:
+      required: true
+
+  - type: input
+    id: proton_wine
+    attributes:
+      label: Proton / Wine version
+      placeholder: "Example: proton-10.0-arm64ec-2"
+    validations:
+      required: true
+
+  - type: input
+    id: fexcore
+    attributes:
+      label: FEXCore version
+      placeholder: "Example: 2604"
+    validations:
+      required: true
+
+  - type: input
+    id: dxvk
+    attributes:
+      label: DXVK version
+      placeholder: "Example: 2.6.1-gplasync"
+    validations:
+      required: true
+
+  - type: input
+    id: resolution
+    attributes:
+      label: Resolution
+      placeholder: "Example: 1280x720"
+    validations:
+      required: true
+
+  - type: input
+    id: present_mode
+    attributes:
+      label: Present mode
+      placeholder: "Example: Mailbox"
+
+  - type: input
+    id: fps_cap
+    attributes:
+      label: FPS target or cap
+      placeholder: "Example: 60 FPS"
+
+  - type: input
+    id: memory
+    attributes:
+      label: Memory and video-memory settings
+      placeholder: "Example: 2048 MB memory, 2048 MB video memory"
+    validations:
+      required: true
+
+  - type: input
+    id: audio
+    attributes:
+      label: Audio settings
+      placeholder: "Example: PulseAudio, latency 144"
+
+  - type: input
+    id: cpu_list
+    attributes:
+      label: Main CPU list
+      placeholder: "Example: 0,1,2,3,4,5,6"
+
+  - type: input
+    id: wow64_cpu_list
+    attributes:
+      label: WoW64 CPU list
+      placeholder: "Example: 4,5,6,7"
+
+  - type: textarea
+    id: environment_variables
+    attributes:
+      label: Environment variables
+      description: Paste any variables that differ from the guide profile.
+      render: shell
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Droid Mod Loader configuration
+
+  - type: input
+    id: dml_version
+    attributes:
+      label: Droid Mod Loader version
+      placeholder: "Example: 0.5.4-beta"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: storage_mode
+    attributes:
+      label: Storage setup
+      options:
+        - Shared storage
+        - App storage
+        - Unsure
+    validations:
+      required: true
+
+  - type: input
+    id: deployment_mode
+    attributes:
+      label: Deployment mode
+      placeholder: "Example: Game root or Data folder deployment"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Test results
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Suggested compatibility status
+      options:
+        - Verified working
+        - Working with issues
+        - Boots only
+        - Unstable
+        - Not working
+        - Needs retest
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: completed_tests
+    attributes:
+      label: Completed tests
+      options:
+        - label: The game launches
+        - label: The main menu loads
+        - label: I loaded into Goodsprings or another playable New Vegas area
+        - label: I played for at least 15 minutes
+        - label: I tested after deploying the guide's mod list
+
+  - type: input
+    id: approximate_fps
+    attributes:
+      label: Approximate performance
+      placeholder: "Example: 45–60 FPS with occasional traversal stutter"
+
+  - type: textarea
+    id: issues
+    attributes:
+      label: Crashes, graphics, audio, or controller problems
+      placeholder: Describe what happened, when it happened, and whether it could be repeated.
+
+  - type: textarea
+    id: thermal
+    attributes:
+      label: Battery and thermal behavior
+      placeholder: "Example: Warm after 20 minutes, no noticeable throttling"
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes required to make it work
+      description: List only changes you made from the guide or linked profile.
+
+  - type: upload
+    id: evidence
+    attributes:
+      label: Screenshots, profile JSON, and logs
+      description: Upload the GameNative profile, game screenshot, DML result, and relevant crash logs.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.webp,.json,.log,.txt,.zip"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I included exact version numbers rather than only saying that it works.
+          required: true
+        - label: I understand that one successful report does not guarantee identical results for every user.
+          required: true

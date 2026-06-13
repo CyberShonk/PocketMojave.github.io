@@ -1,0 +1,117 @@
+name: Guide problem report
+description: Report an incorrect instruction, broken link, or repeatable setup problem in Pocket Mojave.
+title: "[Guide problem]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for repeatable guide problems, incorrect instructions, broken links, or unclear steps.
+
+        General modding questions do not always need a GitHub issue.
+
+        This form is for **Pocket Mojave**.
+
+  - type: dropdown
+    id: page
+    attributes:
+      label: Page
+      options:
+        - Home
+        - Setup
+        - Mod List
+        - Load Order
+        - Avoid
+        - Compatibility
+        - Reports
+        - Glossary
+        - Changelog
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: Page section or instruction
+      placeholder: Copy the heading or describe the exact step.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Explain what the guide says and what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen?
+      description: Describe the result you expected from the instruction.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and chipset
+      placeholder: "Example: AYN Odin 2 — Snapdragon 8 Gen 2"
+
+  - type: input
+    id: gamenative
+    attributes:
+      label: GameNative version
+      placeholder: "Example: GameNative 1.0.0 standard APK"
+
+  - type: input
+    id: dml
+    attributes:
+      label: DML version
+      placeholder: "Example: 0.5.4-beta"
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Other relevant versions
+      placeholder: Proton/Wine, FEXCore, DXVK, Turnip, Android version, and game source.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error text
+      description: Paste the exact error instead of paraphrasing it.
+      render: shell
+
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Screenshots or files
+      description: Upload screenshots, logs, or a profile JSON that helps show the problem.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.webp,.json,.log,.txt,.zip"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that I am using the GameNative build recommended by the guide.
+          required: true
+        - label: I identified the exact page and step where the problem occurs.
+          required: true
+        - label: I included version numbers and did not submit only "it does not work."
+          required: true
